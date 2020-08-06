@@ -7,13 +7,19 @@
     "client:dev": "scripty",
     "client:prod": "scripty",
     "server:dev": "scripty",
-    "server:prod": "scripty"
+    "server:prod": "scripty",
+    "start": "cross-env NODE_ENV=development nodemon dist/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "copy-webpack-plugin": "^6.0.3",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-watch": "^5.0.1",
     "html-webpack-plugin": "^4.3.0",
     "nodemon": "^2.0.4",
     "safe-require": "^1.0.4",

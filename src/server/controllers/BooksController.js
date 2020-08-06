@@ -6,11 +6,12 @@ class BooksController extends Controller {
   }
 
   async actionIndex(ctx,next){
-    ctx.body = await ctx.render('book/index',{title:'列表'})
+    ctx.body = await ctx.render('books/pages/list',{title:'列表'})
   }
 
+
   async actionCreate(ctx,next){
-    ctx.body = await ctx.render('book/create',{title:'创建'})
+    ctx.body = await ctx.render('books/pages/create',{title:'创建'})
   }
 }
 

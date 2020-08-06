@@ -1,5 +1,5 @@
-const Koa = require('koa');
-const serve = require('koa-static');
+import Koa from 'koa';
+import serve from "koa-static"
 const render = require('koa-swig');
 const config = require('./config')
 const {configure, getLogger} = require('log4js');

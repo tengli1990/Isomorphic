@@ -1,1 +1,2 @@
-cross-env NODE_ENV=development nodemon src/server/app.js  
+cross-env NODE_ENV=development gulp
+# nodemon src/server/app.js 
