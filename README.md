@@ -1,4 +1,6 @@
 
+ 
+``` text
 ├── README.md          文档  
 ├── config             webpack配置及插件    
 ├── dist               打包目标文件夹  
@@ -7,3 +9,4 @@
 ├── scripts            shell 脚本  
 ├── src                项目文件夹 - [server, web]  
 └── webpack.config.js  webpack配置文件  
+```
