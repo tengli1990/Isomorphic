@@ -6,6 +6,7 @@ const { sync }  = require("glob")
 const files = sync('./src/web/views/**/*.entry.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlAfterPlugin = require("./config/HtmlAfterPlugin")
+const { resolve } = require('path')
 
 const _entry = {}
 const _plugins = []
@@ -40,7 +41,20 @@ const webpackConfig = {
   plugins:[
     ..._plugins,
     new HtmlAfterPlugin()
-  ]
+  ],
+  module:{
+    rules:[
+      {
+        test:/\.css$/,
+        use:['style-loader','css-loader']
+      }
+    ]
+  },
+  resolve:{
+    alias:{
+      '@':resolve('src/web/components')
+    }
+  }
 }
 
 module.exports = merge(webpackConfig,_mergeConfig)

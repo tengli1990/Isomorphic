@@ -5,7 +5,7 @@ class IndexController extends Controller {
   }
 
   async actionIndex(ctx, next) {
-    ctx.body = 'index pages 11 '
+    ctx.body = await ctx.render('index/pages/index.html')
   }
 }
 

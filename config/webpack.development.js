@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const WebpackBar = require('webpackbar');
 
 module.exports = {
   output:{
@@ -8,6 +9,7 @@ module.exports = {
     filename:'scripts/[name].bundle.js'
   },
   plugins:[
+    new WebpackBar(),
     new CopyWebpackPlugin({
       patterns: [
         {
